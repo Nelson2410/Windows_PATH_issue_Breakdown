@@ -12,23 +12,25 @@ Conçu selon des standards académiques et professionnels, ce projet formalise u
 
 ## Table des matières
 
-1. [Introduction & Problématique](#1-introduction--problématique)
-2. [Architecture du Routage PATH sous Windows](#2-architecture-du-routage-path-sous-windows)
-    - 2.1 [Hiérarchie des Ruches de Registre (HKLM vs HKCU)](#21-hiérarchie-des-ruches-de-registre-hklm-vs-hkcu)
-    - 2.2 [Mécanisme de Construction de la Variable Finale](#22-mécanisme-de-construction-de-la-variable-finale)
-    - 2.3 [Vecteurs Communs de Défaillance](#23-vecteurs-communs-de-défaillance)
-3. [Diagnostic d'Incident en Mode Dégradé (Hors-PATH)](#3-diagnostic-dincident-en-mode-dégradé-hors-path)
-    - 3.1 [Symptomatologie et Paradoxe Diagnostique](#31-symptomatologie-et-paradoxe-diagnostique)
-    - 3.2 [Méthodologie d'Audit In-Memory](#32-méthodologie-daudit-in-memory)
-4. [Protocole de Restauration Curatif](#4-protocole-de-restauration-curatif)
-    - 4.1 [Spécifications du Script Restore-SystemPath.ps1](#41-spécifications-du-script-restore-systempathps1)
-    - 4.2 [Guide d'Exécution et Paramètres](#42-guide-dexécution-et-paramètres)
-5. [Mesures Préventives & Monitoring Passif](#5-mesures-préventives--monitoring-passif)
-    - 5.1 [Déploiement du Watchdog via Install-PathMonitor.ps1](#51-déploiement-du-watchdog-via-install-pathmonitorps1)
-    - 5.2 [Principe de Moindre Privilège par Isolation des Ruches](#52-principe-de-moindre-privilège-par-isolation-des-ruches)
-6. [Synthèse : Les 3 Piliers de la Résilience](#6-synthèse--les-3-piliers-de-la-résilience)
-7. [Structure du Toolkit & Indexation des Fichiers](#7-structure-du-toolkit--indexation-des-fichiers)
-8. [Crédits et Références](#8-crédits-et-références)
+- [WinPath Recovery Toolkit](#winpath-recovery-toolkit)
+  - [Table des matières](#table-des-matières)
+  - [1. Introduction \& Problématique](#1-introduction--problématique)
+  - [2. Architecture du Routage PATH sous Windows](#2-architecture-du-routage-path-sous-windows)
+    - [2.1 Hiérarchie des Ruches de Registre (HKLM vs HKCU)](#21-hiérarchie-des-ruches-de-registre-hklm-vs-hkcu)
+    - [2.2 Mécanisme de Construction de la Variable Finale](#22-mécanisme-de-construction-de-la-variable-finale)
+    - [2.3 Vecteurs Communs de Défaillance](#23-vecteurs-communs-de-défaillance)
+  - [3. Diagnostic d'Incident en Mode Dégradé (Hors-PATH)](#3-diagnostic-dincident-en-mode-dégradé-hors-path)
+    - [3.1 Symptomatologie et Paradoxe Diagnostique](#31-symptomatologie-et-paradoxe-diagnostique)
+    - [3.2 Méthodologie d'Audit In-Memory](#32-méthodologie-daudit-in-memory)
+  - [4. Protocole de Restauration Curatif](#4-protocole-de-restauration-curatif)
+    - [4.1 Spécifications du Script Restore-SystemPath.ps1](#41-spécifications-du-script-restore-systempathps1)
+    - [4.2 Guide d'Exécution et Paramètres](#42-guide-dexécution-et-paramètres)
+  - [5. Mesures Préventives \& Monitoring Passif](#5-mesures-préventives--monitoring-passif)
+    - [5.1 Déploiement du Watchdog via Install-PathMonitor.ps1](#51-déploiement-du-watchdog-via-install-pathmonitorps1)
+    - [5.2 Principe de Moindre Privilège par Isolation des Ruches](#52-principe-de-moindre-privilège-par-isolation-des-ruches)
+  - [6. Synthèse : Les 3 Piliers de la Résilience](#6-synthèse--les-3-piliers-de-la-résilience)
+  - [7. Structure du Toolkit \& Indexation des Fichiers](#7-structure-du-toolkit--indexation-des-fichiers)
+  - [8. Crédits et Références](#8-crédits-et-références)
 
 ---
 
@@ -205,4 +207,4 @@ L'arborescence ci-dessous détaille l'organisation des ressources. Les liens poi
 * **Auteur** : Nelson Bandos (Administrateur Réseau & Système)
 * **LinkedIn** : [Nelson Bandos](https://www.linkedin.com/in/nelson-bandos)
 * **Portfolio** : [nelson-bandos.vercel.app](https://nelson-bandos.vercel.app)
-* **Date de l'incident et de la résoultion** : 5 juillet 2026
+* **Date de l'incident et de la résolution** : 5 juillet 2026
