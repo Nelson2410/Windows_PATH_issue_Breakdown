@@ -1,0 +1,59 @@
+# ==========================================
+# Fichier .gitignore pour WinPath Toolkit
+# ==========================================
+
+# 1. Fichiers spécifiques à l'OS
+# ------------------------------------------------
+[Tt]humbs.db
+ehthumbs.db
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.lnk
+.LSOverride
+
+# 2. Éditeurs et IDE (VS Code, Cursor, etc.)
+# ------------------------------------------
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+.idea/
+*.swp
+*.swo
+*.bak
+*~
+
+# 3. Fichiers PowerShell et Sécurité
+# ----------------------------------
+*.clixml 
+# Ignorer les transcriptions de terminaux et logs d'erreurs
+*.transcript.txt
+*.log
+# Dossiers de compilation
+/out/
+/bin/
+/obj/
+
+# 4. Fichiers de compilation LaTeX (Documentation)
+# ------------------------------------------------
+*.aux
+*.bbl
+*.blg
+*.fls
+*.lof
+*.lot
+*.fdb_latexmk
+*.out
+*.toc
+*.synctex.gz
+*.nav
+*.snm
+# Note : Les fichiers *.pdf ne sont pas ignorés car nous voulons 
+# conserver le rapport final dans le dossier "1 - Docs".
+
+# 5. Fichiers générés par les scripts (Backups)
+# ---------------------------------------------
+PATH_Backup_*.txt
+PATH_Machine_Backup_*.txt
